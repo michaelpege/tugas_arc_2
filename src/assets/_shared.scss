@@ -1,0 +1,45 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+  color : white;
+}
+
+@mixin setup_size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex_center($flex) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $flex;
+}
+
+
+.container{
+  @include flex_center(row);
+  align-items: flex-start;
+  margin-top : 5vh;
+  &>*{
+    flex : 1;
+  }
+  
+}
+
+.card-container{
+  margin-right: 5vw;
+  @include setup_size(100%, 100%);
+  &>*{
+    margin-bottom : 3vh;
+    cursor: pointer;
+  }
+}
+
+$gray : #404040;
+$white : #1c1c1c;
+$card-border-radius : 8px;
+$cakru : #359c6d;
+$kru : #9c3537;
+$padding-vertical : 10vh;
